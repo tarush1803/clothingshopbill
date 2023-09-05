@@ -1,0 +1,70 @@
+mtab=("\t\t\t\t\t\t\t\t\t\t\t")
+mtab2=("\t\t\t\t\t\t\t\t\t")
+mtab3=("\t\t")
+mtab4=("\t\t\t\t")
+mtab5=("\t\t\t")
+date=input("ENTER DATE:")
+name=input("Enter customer name : ")
+mobno=input("Enter customer mobile no : ")
+paymode=input("Enter payment mode :")
+gstin=input("Enter gstin and uin no : ")
+pd=input("Enter product name 1 :- ")
+pd1=input("Enter product name 2 :- ")
+pd2=input("Enter product name 3 :- ")
+qty=int(input("enter the qty. of product 1 :- "))
+qty1=int(input("enter the qty. of product 2 :- "))
+qty2=int(input("enter the qty. of product 3 :- "))
+unitprice=int(input("enter the amt. of product 1:- "))
+unitprice1=int(input("enter the amt. of product 2:- "))
+unitprice2=int(input("enter the amt. of product 3:- "))
+discount=int(input("enter the discount % :- "))
+carrybag=input("enter yes or no for carry bag :- ")
+amt=qty*unitprice
+amt1=qty1*unitprice1
+amt2=qty2*unitprice2
+subtotal=amt+amt1+amt2
+cgst=subtotal*0.06
+sgst=subtotal*0.06
+adiscount=subtotal-(subtotal*(discount/100))
+print("*************************************************************************************************************************\n")
+print("CANTABIL",mtab,"Invoice")
+print("INTERNATIONAL CLOTHING *ITALY*",mtab2,"DATE:",date)
+print("GOPALPURA JAIPUR")
+print("www.cantabilinternational.com")
+print("************************************************************************************************************************\n")
+print("BILL TO :")
+print(name)
+print("MOBILE NO    :-",mobno)
+print("PAYMENT MODE : ",paymode)
+print("GSTIN / UIN  : ",gstin)
+print("************************************************************************************************************************\n")
+print("Sr.No.",mtab3,"Product Name & Description",mtab3,"QTY.",mtab3,"UNIT PRICE",mtab3,"Amount(Rupees)")
+print("1.    ",mtab3,pd ,mtab4 ,qty     ,mtab3,unitprice,mtab5,amt)
+print("2.    ",mtab3,pd1,mtab4,qty1   ,mtab3,unitprice1,mtab5,amt1)
+print("3.    ",mtab3,pd2,mtab4,qty2   ,mtab3,unitprice2,mtab5,amt2,"\n")
+print(mtab,"Subtotal =",subtotal)
+print(mtab,"CGST 6%  =", cgst )
+print(mtab,"SGST 6%  =", sgst)
+print(mtab,"Discount =",discount,"%")
+print(mtab,"Amount after discount=",adiscount)
+if carrybag=="YES":
+        carrybagprice=18
+        totalamount=cgst+sgst+adiscount+carrybagprice
+        print(mtab,"Carry Bag =",carrybag, "=",carrybagprice )
+        print(mtab,"TotalAmount =",totalamount,"Rupees","\n")
+        print("--------------------------------------------------------------------------------------------------------------------\n")
+        print("Goods once sold will not be taken back or exchange")
+        print("Thank YOU For Your Business")
+else:
+    carrybagprice=0
+    totalamount=cgst+sgst+adiscount+carrybagprice
+    print(mtab,"Carry Bag =",carrybag, "=",carrybagprice )
+    print(mtab,"TotalAmount =",totalamount,"Rupees","\n")
+    print("-------------------------------------------------------------------------------------------------------------------------\n")
+    print("Goods once sold will not be taken back or exchange")
+    print("Thank YOU For Your Business")
+    
+    
+
+    
+        
